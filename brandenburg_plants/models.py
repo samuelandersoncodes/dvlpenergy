@@ -8,4 +8,9 @@ class SolarPlant(models.Model):
     name = models.CharField(max_length=120)
     geometry = models.TextField()
 
-    
+    def __str__(self):
+        """
+        String representation
+        of the solar plant object name
+        """
+        return self.name
