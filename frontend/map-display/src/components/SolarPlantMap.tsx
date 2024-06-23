@@ -81,7 +81,7 @@ const SolarPlantMap: React.FC = () => {
         };
     }, []);
     // Renders a div and assign it to mapContainer for map initialization.
-    return <div ref={mapContainer} />;
+    return <div ref={mapContainer} className='map-container'/>;
 }
 
 export default SolarPlantMap;
