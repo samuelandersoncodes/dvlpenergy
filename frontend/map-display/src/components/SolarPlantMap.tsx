@@ -1,4 +1,5 @@
 import mapboxgl, { Map, LngLatLike } from 'mapbox-gl';
+import React, { useRef } from 'react';
 
 
 // Load Mapbox access token from environment variables
@@ -12,6 +13,12 @@ if (!ACCESS_TOKEN) {
 mapboxgl.accessToken = ACCESS_TOKEN;
 
 const SolarPlantMap: React.FC = () => {
+
+    // Creates a reference to store the map container DOM element
+    const mapContainer = useRef<HTMLDivElement | null>(null);
+
+    // Creates a reference to store the Mapbox map instance
+    const map = useRef<Map | null>(null);
 
     // Fetch solar plant data from the Django API
     fetch('/api/solar_plants/')
