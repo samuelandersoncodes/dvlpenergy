@@ -49,6 +49,17 @@ const SolarPlantMap: React.FC = () => {
                                     'properties': {}
                                 }
                             });
+                            // Identify and add a polygon layer for each solar plant
+                            map.current!.addLayer({
+                                'id': solarPlant.id,
+                                'type': 'fill',
+                                'source': solarPlant.id,
+                                'layout': {},
+                                'paint': {
+                                    'fill-color': '#f00',
+                                    'fill-opacity': 0.8
+                                }
+                            });
                         });
                     }
                 });
