@@ -12,10 +12,22 @@ if (!ACCESS_TOKEN) {
 mapboxgl.accessToken = ACCESS_TOKEN;
 
 const SolarPlantMap: React.FC = () => {
-    return (
-        <>
-        </>
-    )
+
+    // Fetch solar plant data from the Django API
+    fetch('/api/solar_plants/')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach((solarPlant: any) => {
+                const geometry = JSON.parse(solarPlant.geometry);
+            });
+        });
+
+}, []);
+
+return (
+    <>
+    </>
+)
 }
 
 export default SolarPlantMap;
