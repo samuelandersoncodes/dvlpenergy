@@ -1,6 +1,6 @@
 import mapboxgl, { Map, LngLatLike } from 'mapbox-gl';
 import React, { useEffect, useRef } from 'react';
-
+import * as turf from '@turf/turf';
 
 // Load Mapbox access token from environment variables
 const ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
@@ -59,6 +59,14 @@ const SolarPlantMap: React.FC = () => {
                                     'fill-color': '#f00',
                                     'fill-opacity': 0.8
                                 }
+                            });
+                            // Add popup on click
+                            map.current!.on('click', solarPlant.id, (e: any) => {
+                                const area = turf.area(geometry);
+                                new mapboxgl.Popup()
+                                    .setLngLat(e.lngLat)
+                                    .setHTML(`<p>Area: ${area.toFixed(2)} square meters</p>`)
+                                    .addTo(map.current!);
                             });
                         });
                     }
