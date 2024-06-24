@@ -59,14 +59,16 @@ CSRF_TRUSTED_ORIGINS = ["http://" + host for host in ALLOWED_HOSTS]
 
 # Development environment conditions
 if DEBUG:
-    INSTALLED_APPS.append('corsheaders')
-    MIDDLEWARE.append('corsheaders.middleware.CorsMiddleware')
-    MIDDLEWARE.remove('django.middleware.csrf.CsrfViewMiddleware')
+    INSTALLED_APPS.append("corsheaders")
+    MIDDLEWARE.append("corsheaders.middleware.CorsMiddleware")
+    MIDDLEWARE.remove("django.middleware.csrf.CsrfViewMiddleware")
     CORS_ORIGIN_ALLOW_ALL = True
     CORS_ALLOW_CREDENTIALS = False
-    os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+    os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
     ALLOWED_HOSTS.append("*")
 
+# Rest framework permission
+REST_FRAMEWORK = {"DEFAULT_PERMISSION_CLASSES": ["rest_framework.permission.AllowAny"]}
 
 ROOT_URLCONF = "solar_farm_map.urls"
 
@@ -135,10 +137,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'frontend/map-display/dist')
-]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "frontend/map-display/dist")]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 
 # Default primary key field type
