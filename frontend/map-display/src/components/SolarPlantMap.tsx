@@ -31,9 +31,9 @@ const SolarPlantMap: React.FC = () => {
             center: [13.4050, 52.5200] as LngLatLike,
             zoom: 8
         });
-
         // Fetch solar plant data from the Django API
-        fetch('/api/solar_plants/')
+        const urlEndpoint = 'http://localhost:8000/api'
+        fetch(`${urlEndpoint}/solar_plant`)
             .then(response => response.json())
             .then(data => {
                 data.forEach((solarPlant: any) => {
@@ -81,7 +81,7 @@ const SolarPlantMap: React.FC = () => {
         };
     }, []);
     // Renders a div and assign it to mapContainer for map initialization.
-    return <div ref={mapContainer} className='map-container'/>;
+    return <div ref={mapContainer} className='map-container' />;
 }
 
 export default SolarPlantMap;
