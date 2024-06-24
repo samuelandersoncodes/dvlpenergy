@@ -57,6 +57,17 @@ MIDDLEWARE = [
 
 CSRF_TRUSTED_ORIGINS = ["http://" + host for host in ALLOWED_HOSTS]
 
+# Development environment conditions
+if DEBUG:
+    INSTALLED_APPS.append('corsheaders')
+    MIDDLEWARE.append('corsheaders.middleware.CorsMiddleware')
+    MIDDLEWARE.remove('django.middleware.csrf.CsrfViewMiddleware')
+    CORS_ORIGIN_ALLOW_ALL = True
+    CORS_ALLOW_CREDENTIALS = False
+    os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+    ALLOWED_HOSTS.append("*")
+
+
 ROOT_URLCONF = "solar_farm_map.urls"
 
 TEMPLATES = [
