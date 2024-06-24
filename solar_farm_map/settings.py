@@ -68,7 +68,11 @@ if DEBUG:
     ALLOWED_HOSTS.append("*")
 
 # Rest framework permission
-REST_FRAMEWORK = {"DEFAULT_PERMISSION_CLASSES": ["rest_framework.permission.AllowAny"]}
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
+    ]
+}
 
 ROOT_URLCONF = "solar_farm_map.urls"
 
@@ -137,7 +141,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "frontend/map-display/dist")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "frontend/dist/assets")]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 
