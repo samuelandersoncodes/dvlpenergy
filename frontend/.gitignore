@@ -15,6 +15,9 @@ dist-ssr
 # ignore packagelock json file
 package-lock.json
 
+# ignore env file
+.env
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
