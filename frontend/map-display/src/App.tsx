@@ -1,11 +1,11 @@
+import SolarPlantMap from "./components/SolarPlantMap"
 
 function App() {
-  
-  return (
-    <>
 
-    </>
+  return (
+    <SolarPlantMap />
   )
+
 }
 
 export default App
