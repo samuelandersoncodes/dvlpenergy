@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import mapboxgl, { Map } from 'mapbox-gl';
+import mapboxgl, { Map, LngLatLike } from 'mapbox-gl';
 import * as turf from '@turf/turf';
 
 // Load Mapbox access token from environment variables
@@ -21,7 +21,15 @@ const SolarPlantMap: React.FC = () => {
     const map = useRef<Map | null>(null);
 
     useEffect(() => {
-
+        // If the map is already initialized, it is left as it is
+        if (!mapContainer.current) return;
+        // But if the map container is available, initialize the Mapbox map
+        map.current = new mapboxgl.Map({
+            container: mapContainer.current,
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [13.4050, 52.5200] as LngLatLike,
+            zoom: 8
+        });
         // Fetch solar plant data from the Django API
         fetch('/api/solar_plants/')
             .then(response => response.json())
