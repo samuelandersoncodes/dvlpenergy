@@ -59,6 +59,13 @@ const SolarPlantMap: React.FC = () => {
                     }
                 });
             });
+        // Cleanup, removes the map when the component unmounts
+        return () => {
+            if (map.current) {
+                map.current.remove();
+                map.current = null;
+            }
+        };
     }, []);
 
     return (
