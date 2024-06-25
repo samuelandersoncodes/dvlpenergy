@@ -3,7 +3,7 @@ import mapboxgl, { Map, LngLatLike } from 'mapbox-gl';
 import * as turf from '@turf/turf';
 
 // Load Mapbox access token from environment variables
-const ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
+const ACCESS_TOKEN = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 
 // Ensure Mapbox access token is set
 if (!ACCESS_TOKEN) {
