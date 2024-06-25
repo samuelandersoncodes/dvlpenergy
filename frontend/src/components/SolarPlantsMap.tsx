@@ -14,6 +14,9 @@ mapboxgl.accessToken = ACCESS_TOKEN;
 
 const SolarPlantMap: React.FC = () => {
 
+    // Creates a reference to store the map container DOM element
+    const mapContainer = useRef<HTMLDivElement | null>(null);
+
     // Creates a reference to store the Mapbox map instance
     const map = useRef<Map | null>(null);
 
@@ -68,9 +71,8 @@ const SolarPlantMap: React.FC = () => {
         };
     }, []);
 
-    return (
-        <></>
-    )
+    // Renders a div and assign it to mapContainer for map initialization.
+    return <div ref={mapContainer} className='map-container' />;
 
 }
 
