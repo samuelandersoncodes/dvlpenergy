@@ -29,8 +29,8 @@ const SolarPlantMap: React.FC = () => {
         map.current = new mapboxgl.Map({
             container: mapContainer.current,
             style: 'mapbox://styles/mapbox/streets-v11',
-            center: [13.4050, 52.5200] as LngLatLike,
-            zoom: 8
+            center: [12.5431, 52.4125] as LngLatLike,
+            zoom: 9
         });
         // Fetch solar plant data from the Django API
         fetch('/api/solar_plants/')
