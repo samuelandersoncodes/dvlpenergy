@@ -34,7 +34,12 @@ const SolarPlantMap: React.FC = () => {
         });
         // Fetch solar plant data from the Django API
         fetch('/api/solar_plants/')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network error');
+                }
+                return response.json();
+            })
             .then(data => {
                 data.forEach((solarPlant: any) => {
                     const geometry = JSON.parse(solarPlant.geometry);
@@ -71,6 +76,9 @@ const SolarPlantMap: React.FC = () => {
                         });
                     }
                 });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
             });
         // Cleanup, removes the map when the component unmounts
         return () => {
