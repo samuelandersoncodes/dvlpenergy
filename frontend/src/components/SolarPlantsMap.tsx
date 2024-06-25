@@ -21,6 +21,19 @@ const SolarPlantMap: React.FC = () => {
             .then(data => {
                 data.forEach((solarPlant: any) => {
                     const geometry = JSON.parse(solarPlant.geometry);
+                    // Add solar plant polygon to the map
+                    if (map.current) {
+                        map.current.on('load', () => {
+                            map.current!.addSource(solarPlant.id, {
+                                'type': 'geojson',
+                                'data': {
+                                    'type': 'Feature',
+                                    'geometry': geometry,
+                                    'properties': {}
+                                }
+                            });
+                        });
+                    }
                 });
             });
     }, []);
