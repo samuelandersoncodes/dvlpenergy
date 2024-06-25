@@ -1,4 +1,4 @@
-import SolarPlantMap from "./components/solarplantmap/SolarPlantsMap";
+import SolarPlantMap from "./components/solarplantsmap/SolarPlantsMap";
 
 function App() {
 

@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import mapboxgl, { Map, LngLatLike } from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import * as turf from '@turf/turf';
+import styles from './SolarPlantsMap.module.css'
 
 // Load Mapbox access token from environment variables
 const ACCESS_TOKEN = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
@@ -81,7 +82,7 @@ const SolarPlantMap: React.FC = () => {
     }, []);
 
     // Renders a div and assign it to mapContainer for map initialization.
-    return <div ref={mapContainer} className='map-container' />;
+    return <div ref={mapContainer} className={styles.mapContainer} />;
 
 }
 
