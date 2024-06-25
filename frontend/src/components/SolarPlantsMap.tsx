@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import mapboxgl from 'mapbox-gl';
+import React, { useEffect, useRef } from 'react';
+import mapboxgl, { Map } from 'mapbox-gl';
 
 // Load Mapbox access token from environment variables
 const ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
@@ -12,6 +12,9 @@ if (!ACCESS_TOKEN) {
 mapboxgl.accessToken = ACCESS_TOKEN;
 
 const SolarPlantMap: React.FC = () => {
+
+    // Creates a reference to store the Mapbox map instance
+    const map = useRef<Map | null>(null);
 
     useEffect(() => {
 
