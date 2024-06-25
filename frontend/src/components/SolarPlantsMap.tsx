@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import mapboxgl from 'mapbox-gl';
 
 // Load Mapbox access token from environment variables
 const ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
