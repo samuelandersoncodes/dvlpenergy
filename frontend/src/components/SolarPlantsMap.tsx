@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import mapboxgl, { Map, LngLatLike } from 'mapbox-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 import * as turf from '@turf/turf';
 
 // Load Mapbox access token from environment variables
