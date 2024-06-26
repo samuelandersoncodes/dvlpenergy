@@ -22,6 +22,9 @@ const SolarPlantMap: React.FC = () => {
     // Creates a reference to store the Mapbox map instance
     const map = useRef<Map | null>(null);
 
+    // Stores LngLatLike coordinates value
+    const centerCoordinates: LngLatLike = [12.5431, 52.4125];
+
     useEffect(() => {
         // If the map is already initialized, it is left as it is
         if (!mapContainer.current) return;
@@ -29,7 +32,7 @@ const SolarPlantMap: React.FC = () => {
         map.current = new mapboxgl.Map({
             container: mapContainer.current,
             style: 'mapbox://styles/mapbox/streets-v11',
-            center: [12.5431, 52.4125] as LngLatLike,
+            center: centerCoordinates,
             zoom: 9
         });
         // Django rest framework api endpoint url
