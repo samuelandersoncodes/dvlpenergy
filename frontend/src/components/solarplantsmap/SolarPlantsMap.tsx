@@ -32,8 +32,11 @@ const SolarPlantMap: React.FC = () => {
             center: [12.5431, 52.4125] as LngLatLike,
             zoom: 9
         });
+        // Django rest framework api endpoint url
+        const apiUrlEndpoint = 'http://127.0.0.1:8000/api';
+
         // Fetch solar plant data from the Django API
-        fetch('/api/solar_plants/')
+        fetch(`${apiUrlEndpoint}/solar_plants/`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network error');
