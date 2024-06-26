@@ -40,7 +40,7 @@ const SolarPlantMap: React.FC = () => {
             // Convert fetched data to GeoJSON features
             const features: GeoJSON.Feature<GeoJSON.Geometry>[] = data.map((solarPlant: any, index: number) => ({
                 type: 'Feature',
-                geometry: (JSON.parse(solarPlant.geometry)),
+                geometry: normalizeGeometry(JSON.parse(solarPlant.geometry)),
                 properties: { id: index }
             }));
             // Add each feature (solar plant) as a source and layer on the map
@@ -119,3 +119,16 @@ const SolarPlantMap: React.FC = () => {
 };
 
 export default SolarPlantMap;
+
+
+// Normalize geometry coordinates from EPSG:3857 to EPSG:4326
+function normalizeGeometry<T extends { coordinates: number[][][] }>(geometry: T) {
+    const result = { ...geometry }
+    result.coordinates = geometry.coordinates.map((ring) =>
+        ring.map((coord) => {
+            return proj4('EPSG:3857', 'EPSG:4326', coord)
+        }),
+    )
+
+    return result
+};
