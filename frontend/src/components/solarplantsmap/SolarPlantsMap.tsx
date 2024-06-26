@@ -3,6 +3,7 @@ import mapboxgl, { Map, LngLatLike } from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import * as turf from '@turf/turf';
 import styles from './SolarPlantsMap.module.css'
+import proj4 from 'proj4'
 
 // Load Mapbox access token from environment variables
 const ACCESS_TOKEN = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
