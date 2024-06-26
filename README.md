@@ -26,3 +26,11 @@
     - [Version Control](#version-control)
     - [Heroku Deployment](#heroku-deployment)
   - [Credits](#credits)
+
+# User-Experience-Design
+
+## The-Strategy-Plane
+
+### Site-Goals
+
+This web application is aimed at displaying the map of Brandenburg with plotted polygon layers of solar plants. 
