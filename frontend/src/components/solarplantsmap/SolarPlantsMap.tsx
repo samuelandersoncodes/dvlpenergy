@@ -121,6 +121,11 @@ const SolarPlantMap: React.FC = () => {
 
 export default SolarPlantMap;
 
+// Define projection definitions for EPSG:3857 and EPSG:4326 coordinate reference systems
+proj4.defs([
+    ['EPSG:3857', '+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs'],
+    ['EPSG:4326', '+proj=longlat +datum=WGS84 +no_defs'],
+]);
 
 // Normalize geometry coordinates from EPSG:3857 to EPSG:4326
 function normalizeGeometry<T extends { coordinates: number[][][] }>(geometry: T) {
@@ -130,6 +135,5 @@ function normalizeGeometry<T extends { coordinates: number[][][] }>(geometry: T)
             return proj4('EPSG:3857', 'EPSG:4326', coord)
         }),
     )
-
     return result
 };
