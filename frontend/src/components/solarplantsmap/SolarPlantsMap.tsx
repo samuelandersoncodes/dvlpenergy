@@ -71,7 +71,7 @@ const SolarPlantMap: React.FC = () => {
                 map.current!.on('click', layerId, (e: any) => {
                     const feature = e.features[0];
                     const area = turf.area(feature);
-                    const popupContent = `<p>Area: ${area.toFixed(2)} sq/m</p>`;
+                    const popupContent = `<p style="color: black;">Area: ${area.toFixed(2)} sq/m</p>`;
                     new mapboxgl.Popup()
                         .setLngLat(e.lngLat)
                         .setHTML(popupContent)
