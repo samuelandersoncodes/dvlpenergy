@@ -33,4 +33,5 @@
 
 ### Site-Goals
 
-This web application is aimed at displaying the map of Brandenburg with plotted polygon layers of solar plants. 
+This web application is aimed at displaying the map of Brandenburg with plotted polygon layers of solar plants.
+When the user clicks on the polygon layer marked red, the total area of the polygon pops up in square meters.
