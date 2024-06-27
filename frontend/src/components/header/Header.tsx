@@ -22,7 +22,6 @@ const Header: React.FC = () => {
                 {/* Links for desktop view */}
                 <div className={styles.links}>
                     <a href="/">Home</a>
-                    <a href="/">About Task</a>
                     <a href="#footer">Contact</a>
                 </div>
                 {/* Mobile menu toggle */}
@@ -41,7 +40,6 @@ const Header: React.FC = () => {
                 {/* Dropdown menu for mobile view */}
                 <div className={`${styles.dropdown} ${isOpen ? styles.show : ""}`}>
                     <a href="/">Home</a>
-                    <a href="/">About Task</a>
                     <a href="/">Contact</a>
                 </div>
             </div>
