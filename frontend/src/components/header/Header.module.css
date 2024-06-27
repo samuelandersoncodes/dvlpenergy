@@ -32,3 +32,8 @@
 .links a:hover {
     color: rgb(229, 137, 38);
 }
+
+/* Mobile menu styles */
+.mobMenu {
+    display: none;
+}
