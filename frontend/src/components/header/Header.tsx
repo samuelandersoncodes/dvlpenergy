@@ -38,6 +38,12 @@ const Header: React.FC = () => {
                         <span></span>
                     </div>
                 </div>
+                {/* Dropdown menu for mobile view */}
+                <div className={`${styles.dropdown} ${isOpen ? styles.show : ""}`}>
+                    <a href="/">Home</a>
+                    <a href="/">About</a>
+                    <a href="/">Contact</a>
+                </div>
             </div>
         </div>
     )
