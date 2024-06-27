@@ -2,3 +2,10 @@
 .footerContainer {
     padding: 10px 40px;
 }
+
+/* Footer wrapper */
+.footerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
