@@ -79,4 +79,43 @@
         display: block;
     }
 
+    .hamburger {
+        height: 30px;
+        width: 28px;
+        position: relative;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #181717;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger span:first-child {
+        top: 8px;
+    }
+
+    .hamburger span:last-child {
+        bottom: 8px;
+    }
+
+    .animated span {
+        background-color: #181717;
+    }
+
+    .animated span:first-child {
+        transform: rotate(-45deg);
+        top: 14px;
+    }
+
+    .animated span:last-child {
+        transform: rotate(45deg);
+        bottom: 14px;
+    }
+
 }
