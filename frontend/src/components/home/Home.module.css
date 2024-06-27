@@ -31,14 +31,14 @@
     top: 92%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 10px 40px;
+    padding: 0.4rem 1rem;
     border-radius: 12px;
     text-transform: uppercase;
     background-color: rgb(229, 137, 38);
     border: 3px solid #3a3b3c;
     cursor: pointer;
     font-weight: 800;
-    font-size: 180%;
+    font-size: 170%;
     color: rgba(0, 0, 0, 0.886);
 }
 
@@ -48,3 +48,14 @@
     border: 3px solid #ed8031;
     color: rgba(0, 0, 0, 0.765);
 }
+
+
+/* Media query for button Styles */
+@media screen and (max-width: 399px) {
+
+    .btn {
+        font-size: 100%;
+    }
+
+}
+
