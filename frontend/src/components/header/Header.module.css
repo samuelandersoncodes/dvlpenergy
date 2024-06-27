@@ -9,3 +9,9 @@
     align-items: center;
     justify-content: space-between;
 }
+
+/* Logo styles */
+.logo {
+    width: 160px;
+    height: 60px;
+}
