@@ -22,7 +22,7 @@ const Header: React.FC = () => {
                 {/* Links for desktop view */}
                 <div className={styles.links}>
                     <a href="/">Home</a>
-                    <a href="https://github.com/samuelandersoncodes/dvlpenergy-task">Project repo&nbsp;</a>
+                    <a href="https://github.com/samuelandersoncodes/dvlpenergy-task">Project repo&nbsp;&nbsp;&nbsp;</a>
                 </div>
                 {/* Mobile menu toggle */}
                 <div className={styles.mobMenu}>
