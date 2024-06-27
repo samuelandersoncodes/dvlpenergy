@@ -52,15 +52,23 @@
     right: -800px;
     top: 0;
     transition: right 0.5s ease-in-out;
-  }
-  
-  .dropdown a {
+}
+
+.dropdown a {
     text-decoration: none;
     font-size: 20px;
     color: black;
-  }
-  
-  .dropdown.show {
+}
+
+.dropdown.show {
     top: 0;
     right: 0;
-  }
+}
+
+/* Media query for small screens */
+@media (max-width: 650px) {
+    .headerContainer {
+        padding: 10px 30px;
+    }
+
+}
