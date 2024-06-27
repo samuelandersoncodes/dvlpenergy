@@ -143,3 +143,10 @@
     }
 
 }
+
+/* Media query for larger screens */
+@media (min-width: 1500px) {
+    .dropdown {
+        display: none;
+    }
+}
