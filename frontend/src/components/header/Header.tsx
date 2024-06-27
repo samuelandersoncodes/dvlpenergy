@@ -22,7 +22,7 @@ const Header: React.FC = () => {
                 {/* Links for desktop view */}
                 <div className={styles.links}>
                     <a href="/">Home</a>
-                    <a href="#footer">Contact</a>
+                    <a href="https://github.com/samuelandersoncodes/dvlpenergy-task">Project repo</a>
                 </div>
                 {/* Mobile menu toggle */}
                 <div className={styles.mobMenu}>
@@ -40,7 +40,7 @@ const Header: React.FC = () => {
                 {/* Dropdown menu for mobile view */}
                 <div className={`${styles.dropdown} ${isOpen ? styles.show : ""}`}>
                     <a href="/">Home</a>
-                    <a href="/">Contact</a>
+                    <a href="https://github.com/samuelandersoncodes/dvlpenergy-task">Project repo</a>
                 </div>
             </div>
         </div>
