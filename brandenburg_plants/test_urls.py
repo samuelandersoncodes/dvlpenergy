@@ -32,5 +32,15 @@ class SolarPlantViewSetTestCase(TestCase):
         self.assertEqual(len(response.data), 1)
 
 
+    def test_retrieve_solar_plant(self):
+        """
+        Test retrieving a specific solar plant via GET request.
+        """
+        url = reverse('solarplant-detail', args=[self.solar_plant.id])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['name'], self.solar_plant_data['name'])
+
+
 if __name__ == '__main__':
     unittest.main()
