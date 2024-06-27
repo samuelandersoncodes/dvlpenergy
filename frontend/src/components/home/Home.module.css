@@ -28,21 +28,23 @@
 .btn {
     z-index: 3;
     position: absolute;
-    top: 80%;
+    top: 92%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px 40px;
-    border-radius: 6px;
+    border-radius: 12px;
     text-transform: uppercase;
-    background-color: #fac855;
-    border: 2px solid #ed8031;
+    background-color: rgb(229, 137, 38);
+    border: 3px solid #3a3b3c;
     cursor: pointer;
     font-weight: 800;
     font-size: 180%;
+    color: rgba(0, 0, 0, 0.886);
 }
 
 /* Open map button Styles */
 .btn:hover {
-    background-color: #ed8031;
-    border: 4px solid #ed8031;
+    background-color: #ed7f31bb;
+    border: 3px solid #ed8031;
+    color: rgba(0, 0, 0, 0.765);
 }
