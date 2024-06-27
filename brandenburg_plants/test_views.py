@@ -20,12 +20,22 @@ class SolarPlantViewSetTestCase(TestCase):
 
     def test_list_solar_plants(self):
         """
-        Test listing solar plants via GET request to the API endpoint.
+        Test listing solar plants via GET request
+        to the API endpoint.
         """
         response = self.client.get(apiUrlEndpoint)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.json()), 1)
 
-    
+    def test_retrieve_solar_plant(self):
+        """
+        Test retrieving a specific solar plant by its ID via GET 
+        request to the API endpoint.
+        """
+        response = self.client.get(f"{apiUrlEndpoint}{self.solar_plant.id}/")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json()["name"], self.solar_plant_data["name"])
+
+
 if __name__ == "__main__":
     unittest.main()
