@@ -70,5 +70,20 @@ class SolarPlantViewSetTestCase(TestCase):
         self.assertEqual(self.solar_plant.name, 'Updated Test Solar Plant')
 
 
+    def test_partial_update_solar_plant(self):
+        """
+        Test partially updating an existing solar
+        plant via PATCH request.
+        """
+        updated_data = {
+            'geometry': '{"type": "Point", "coordinates": [3.0, 4.0]}'
+        }
+        url = reverse('solarplant-detail', args=[self.solar_plant.id])
+        response = self.client.patch(url, updated_data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.solar_plant.refresh_from_db()
+        self.assertEqual(self.solar_plant.geometry, '{"type": "Point", "coordinates": [3.0, 4.0]}')
+
+
 if __name__ == '__main__':
     unittest.main()
