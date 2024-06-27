@@ -138,4 +138,8 @@
         padding: 10px 20px;
     }
 
+    .dropdown a {
+        font-size: 16px;
+    }
+
 }
