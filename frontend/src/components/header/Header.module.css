@@ -2,3 +2,10 @@
 .headerContainer {
     padding: 10px 40px;
 }
+
+/* Header wrap styles */
+.headerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
