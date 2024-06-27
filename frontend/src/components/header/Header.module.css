@@ -121,9 +121,13 @@
 }
 
 @media screen and (max-width: 512px) {
-    
     .headerContainer {
         padding: 10px 35px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 40px;
     }
 
 }
