@@ -83,7 +83,7 @@
         height: 30px;
         width: 28px;
         position: relative;
-        z-index: 100;
+        z-index: 3;
         cursor: pointer;
     }
 
@@ -133,7 +133,7 @@
 }
 
 @media screen and (max-width: 491px) {
-    
+
     .headerContainer {
         padding: 10px 20px;
     }
