@@ -1,3 +1,4 @@
+import unittest
 from django.test import TestCase
 from .models import SolarPlant
 
@@ -6,7 +7,6 @@ class SolarPlantModelTestCase(TestCase):
         """
         This function sets up a test environment
         by creating a sample SolarPlant object
-        and a GeoJSON geometry coordinate points
         """
         SolarPlant.objects.create(
             name='Test Plant', 
@@ -21,3 +21,5 @@ class SolarPlantModelTestCase(TestCase):
         plant = SolarPlant.objects.get(name='Test Plant')
         self.assertEqual(str(plant), 'Test Plant')
 
+if __name__ == '__main__':
+    unittest.main()
