@@ -1,4 +1,14 @@
+/* Map container Styles */
 .mapContainer {
     height: 100vh;
     width: 100%;
+}
+
+/* Media query for small screens */
+@media (max-width: 650px) {
+
+    .mapContainer {
+        z-index: -1;
+    }
+
 }
