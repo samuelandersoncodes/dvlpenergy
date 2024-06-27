@@ -16,13 +16,20 @@ class SolarPlantViewSetTestCase(TestCase):
         """
         self.client = APIClient()
         self.url = reverse('solarplant-list')
-
         # Create a sample SolarPlant object for testing
         self.solar_plant_data = {
             'name': 'Test Solar Plant',
             'geometry': '{"type": "Point", "coordinates": [1.0, 2.0]}'
         }
         self.solar_plant = SolarPlant.objects.create(**self.solar_plant_data)
+
+    def test_list_solar_plants(self):
+        """
+        Test listing all solar plants via GET request.
+        """
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(len(response.data), 1)
 
 
 if __name__ == '__main__':
