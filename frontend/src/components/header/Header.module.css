@@ -25,12 +25,12 @@
 .links a {
     font-size: 18px;
     text-decoration: none;
-    color: black;
+    color: rgb(229, 137, 38);
 }
 
 /* Links hover styles */
 .links a:hover {
-    color: rgb(229, 137, 38);
+    color: rgba(229, 137, 38, 0.479);
 }
 
 /* Mobile menu styles */
