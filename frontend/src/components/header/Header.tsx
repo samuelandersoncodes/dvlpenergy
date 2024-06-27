@@ -25,9 +25,23 @@ const Header: React.FC = () => {
                     <a href="/">About Task</a>
                     <a href="#footer">Contact</a>
                 </div>
+                {/* Mobile menu toggle */}
+                <div className={styles.mobMenu}>
+                    <div
+                        className={`${isOpen
+                            ? `${styles.hamburger} ${styles.animated}`
+                            : styles.hamburger
+                            }`}
+                        onClick={toggleMenu}
+                    >
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </div>
     )
+
 };
 
 export default Header;
