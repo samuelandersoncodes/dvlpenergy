@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const Header: React.FC = () => {
     // State for menu toggle
-    
+
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     return (
@@ -15,6 +15,11 @@ const Header: React.FC = () => {
                     <a href="/">
                         <img src={logo} className={styles.logo} alt="company logo" />
                     </a>
+                </div>
+                <div className={styles.links}>
+                    <a href="/">Home</a>
+                    <a href="/">About Task</a>
+                    <a href="#footer">Contact</a>
                 </div>
             </div>
         </div>
