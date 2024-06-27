@@ -23,3 +23,20 @@
     object-fit: cover;
     z-index: -1;
 }
+
+/* Open map button Styles */
+.btn {
+    z-index: 3;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 40px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    background-color: #fac855;
+    border: 2px solid #ed8031;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 180%;
+}
