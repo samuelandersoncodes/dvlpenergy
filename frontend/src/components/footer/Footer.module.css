@@ -22,7 +22,7 @@ a {
     color: rgba(215, 144, 12, 0.963);
 }
 
-/* Media query for footer container */
+/* Media query for footer container < 651px */
 @media (max-width: 650px) {
 
     .footerContainer {
@@ -31,7 +31,7 @@ a {
 
 }
 
-/* Media query for footer container  and github link */
+/* Media query for footer container  and github link < 513px */
 @media screen and (max-width: 512px) {
     .footerContainer {
         padding: 10px 35px;
@@ -40,6 +40,20 @@ a {
     p,
     a {
         font-size: 16px;
+    }
+
+}
+
+/* Media query for footer container and github link < 391px */
+@media screen and (max-width: 390px) {
+
+    .footerContainer {
+        padding: 10px 20px;
+    }
+
+    p,
+    a {
+        font-size: 14px;
     }
 
 }
