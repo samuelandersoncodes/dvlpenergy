@@ -37,3 +37,30 @@
 .mobMenu {
     display: none;
 }
+
+/* Dropdown menu styles */
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 50dvw;
+    height: 100dvh;
+    align-items: center;
+    gap: 64px;
+    position: fixed;
+    padding-top: 150px;
+    background-color: rgb(222, 153, 33);
+    right: -800px;
+    top: 0;
+    transition: right 0.5s ease-in-out;
+  }
+  
+  .dropdown a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+  }
+  
+  .dropdown.show {
+    top: 0;
+    right: 0;
+  }
