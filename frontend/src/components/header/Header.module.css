@@ -119,3 +119,11 @@
     }
 
 }
+
+@media screen and (max-width: 512px) {
+    
+    .headerContainer {
+        padding: 10px 35px;
+    }
+
+}
