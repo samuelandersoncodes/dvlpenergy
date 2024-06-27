@@ -85,5 +85,15 @@ class SolarPlantViewSetTestCase(TestCase):
         self.assertEqual(self.solar_plant.geometry, '{"type": "Point", "coordinates": [3.0, 4.0]}')
 
 
+    def test_delete_solar_plant(self):
+        """
+        Test deleting an existing solar plant via DELETE request.
+        """
+        url = reverse('solarplant-detail', args=[self.solar_plant.id])
+        response = self.client.delete(url)
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        self.assertFalse(SolarPlant.objects.filter(id=self.solar_plant.id).exists())
+
+
 if __name__ == '__main__':
     unittest.main()
