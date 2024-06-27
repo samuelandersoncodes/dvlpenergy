@@ -42,5 +42,18 @@ class SolarPlantViewSetTestCase(TestCase):
         self.assertEqual(response.data['name'], self.solar_plant_data['name'])
 
 
+    def test_create_solar_plant(self):
+        """
+        Test creating a new solar plant via POST request.
+        """
+        new_solar_plant_data = {
+            'name': 'New Test Solar Plant',
+            'geometry': '{"type": "Point", "coordinates": [2.0, 3.0]}'
+        }
+        response = self.client.post(self.url, new_solar_plant_data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(SolarPlant.objects.count(), 2)
+
+
 if __name__ == '__main__':
     unittest.main()
