@@ -21,7 +21,7 @@ const Header: React.FC = () => {
                 </div>
                 {/* Links for desktop view */}
                 <div className={styles.links}>
-                    <a href="/" aria-label="Got ot home page" >Home</a>
+                    <a href="/" aria-label="Go to home page" >Home</a>
                     <a href="https://github.com/samuelandersoncodes/dvlpenergy-task"
                         target="_blank"
                         rel="noopener"
@@ -43,12 +43,16 @@ const Header: React.FC = () => {
                 </div>
                 {/* Dropdown menu for mobile view */}
                 <div className={`${styles.dropdown} ${isOpen ? styles.show : ""}`}>
-                    <a href="/" aria-label="Got ot home page">Home</a>
+                    <a href="/" aria-label="Go to home page">
+                        Home
+                    </a>
                     <a href="https://github.com/samuelandersoncodes/dvlpenergy-task"
                         aria-label="Open the project repository on GitHub"
                         target="_blank"
                         rel="noopener noreferrer"
-                    >Project repo</a>
+                    >
+                        Project repo
+                    </a>
                 </div>
             </div>
         </div>
