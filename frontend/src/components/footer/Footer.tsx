@@ -18,9 +18,8 @@ const Footer: React.FC = () => {
                         target="_blank"
                         rel="noopener"
                     >
-                        {" "}
                         <br />
-                        Project repo{" "}
+                        Project repo
                     </a>
                 </p>
             </div>
