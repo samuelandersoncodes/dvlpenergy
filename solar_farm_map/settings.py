@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "localhost:5173"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "localhost:5173", "dvlpenergy-task-4229b9c60fd6.herokuapp.com"]
 
 # Application definition
 
