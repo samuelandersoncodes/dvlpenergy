@@ -127,7 +127,7 @@
 }
 
 /* Media query for larger screens */
-@media (min-width: 1500px) {
+@media (min-width: 651px) {
     .dropdown {
         display: none;
     }
