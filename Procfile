@@ -1,0 +1,1 @@
+web: gunicorn dvlpenergy-task.wsgi:application
