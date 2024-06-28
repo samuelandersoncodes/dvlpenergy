@@ -5,11 +5,12 @@ class SolarPlant(models.Model):
     brandenburg solar plants model
     with name and geometry fields
     """
+
+    name = models.CharField(max_length=120, default='unnamed')
     geometry = models.TextField()
 
     def __str__(self):
         """
-        String representation
-        of the solar plant object id
+        String representation of the solar plant object name.
         """
-        return f'SolarPlant {self.id}'
+        return self.name
