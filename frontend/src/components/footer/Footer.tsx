@@ -10,13 +10,13 @@ const Footer: React.FC = () => {
                 <p>
                     © dvlp.energy 2024
                     <a
-                        href="https://github.com/samuelandersoncodes"
+                        href="https://github.com/samuelandersoncodes/dvlpenergy-task"
                         target="_blank"
                         rel="noopener"
                     >
                         {" "}
                         <br />
-                        Samuel Anderson's GitHub{" "}
+                        Project repo{" "}
                     </a>
                 </p>
             </div>
