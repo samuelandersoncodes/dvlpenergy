@@ -1,1 +1,1 @@
-web: gunicorn dvlpenergy-task.wsgi:application
+web: gunicorn solar_farm_map.wsgi:application
