@@ -15,13 +15,13 @@ const Header: React.FC = () => {
             <div className={styles.headerWrapper}>
                 {/* logo */}
                 <div>
-                    <a href="/">
+                    <a href="/" aria-label="Go to home page">
                         <img src={logo} className={styles.logo} alt="company logo" />
                     </a>
                 </div>
                 {/* Links for desktop view */}
                 <div className={styles.links}>
-                    <a href="/">Home</a>
+                    <a href="/" aria-label="Got ot home page" >Home</a>
                     <a href="https://github.com/samuelandersoncodes/dvlpenergy-task"
                         target="_blank"
                         rel="noopener"
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
                 </div>
                 {/* Dropdown menu for mobile view */}
                 <div className={`${styles.dropdown} ${isOpen ? styles.show : ""}`}>
-                    <a href="/">Home</a>
+                    <a href="/" aria-label="Got ot home page">Home</a>
                     <a href="https://github.com/samuelandersoncodes/dvlpenergy-task"
                         aria-label="Open the project repository on GitHub"
                         target="_blank"
