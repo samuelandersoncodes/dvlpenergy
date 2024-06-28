@@ -9,6 +9,7 @@ const Home = () => {
     const handleOpenMap = () => {
         navigate("/destination");
     };
+
     return (
         <div className={styles.container}>
             {/* Container div for the home component */}
@@ -19,7 +20,11 @@ const Home = () => {
                 </video>
             </div>
             {/* Button to trigger navigation to the map */}
-            <button className={styles.btn} onClick={handleOpenMap}>
+            <button
+                className={styles.btn}
+                onClick={handleOpenMap}
+                aria-label="Open Map"
+            >
                 Open Map
             </button>
         </div>
