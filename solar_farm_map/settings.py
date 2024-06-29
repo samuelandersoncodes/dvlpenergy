@@ -35,7 +35,7 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost:5173",
     "dvlpenergy-task-4229b9c60fd6.herokuapp.com",
-    "dvlpenergy-task-4229b9c60fd6.herokuapp.com/api/solar_plants"
+    "dvlpenergy-task-4229b9c60fd6.herokuapp.com/api/"
     ]
 
 # Application definition

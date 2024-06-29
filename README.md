@@ -56,4 +56,6 @@ I then created the [dvlpenergy-task repository](https://github.com/samuelanderso
 Subsequently, I used the Kanban board to plan the main segments of the development.
 ![Kanban board](./docs/dvlp-energy-kanban.png)
 With that, I had only four main issues set in order of priority due to time constraints. ![Issues](./docs/dvlp-kanban-issues.png)
-with its respective user stories, acceptance criteria and tasks. For example, the main priority was to get the map well integrated so that I can continue to build upon it. ![Issues](./docs/main-user-story.png)
+It comes along with its respective user stories, acceptance criteria and tasks. For example, the main priority was to get the map well integrated so that I can continue to build upon it. ![Issues](./docs/main-user-story.png)
+
+##Steps
