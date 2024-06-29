@@ -70,11 +70,7 @@ MIDDLEWARE = [
 # COR allowed hosts
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "http://localhost:5173/destination"  
-    "https://dvlpenergy-task-4229b9c60fd6.herokuapp.com",
-    "https://dvlpenergy-task-4229b9c60fd6.herokuapp.com/api/",
-    "https://dvlpenergy-task-4229b9c60fd6.herokuapp.com/api/solar_plants", 
-    
+    "https://dvlpenergy-task-4229b9c60fd6.herokuapp.com",     
 ]
 
 CORS_ALLOW_CREDENTIALS = True
