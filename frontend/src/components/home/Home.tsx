@@ -15,7 +15,8 @@ const Home = () => {
             <div className={styles.videoContainer}>
                 {/* video background */}
                 <video autoPlay loop muted className={styles.videoBackground}>
-                    <source src="https://kidomart.s3.eu-central-1.amazonaws.com/media/userprofile/home-video.mp4"
+                    <source
+                        src="https://kidomart.s3.eu-central-1.amazonaws.com/media/userprofile/home-video-optimized.mp4"
                         type="video/mp4" />
                 </video>
             </div>
