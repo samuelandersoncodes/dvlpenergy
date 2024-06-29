@@ -5,6 +5,8 @@ The application therefore renders a basemap of Brandenburg and indicates with po
 
 The live link can be found here: [Live Site - dvlpenergy-task](https://dvlpenergy-task-4229b9c60fd6.herokuapp.com/)
 
+![Mock Up](./docs/dvlp-mockup.mp4)
+
 ## Table of Contents
 - [dvlpenergy-task](#dvlpenergy-task)
   - [Table of Contents](#table-of-contents)
