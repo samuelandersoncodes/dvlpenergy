@@ -73,7 +73,7 @@ I straight away created my virtual environment with 'python3 -m venv .venv' and 
 
 Furthermore, I installed the core necessary libraries. For instance, the Django RESTframework with the 'pip install django djangorestframework' and subsequently did so for the other libraries as needed.
 
-I finally configured settings in the 'settings.py' file of the project and also added the new app to the installed apps section and created my superuser with the 'python manage.py createsuperuser' command', migrated changes with 'python manage.py migrate' and made sure the site fires without errors.
+I finally configured settings in the 'settings.py' file of the project, created the env.py file to store the django secret key and also added the new app to the installed apps section. Afterwards, I created my superuser with the 'python manage.py createsuperuser' command, migrated changes with 'python manage.py migrate' and made sure the site fires without errors.
 
 ### 2. ElephantSQL Database Setup
 
