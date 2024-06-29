@@ -51,11 +51,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "brandenburg_plants",
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -63,6 +66,18 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+# COR allowed hosts
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://localhost:5173/destination"  
+    "https://dvlpenergy-task-4229b9c60fd6.herokuapp.com",
+    "https://dvlpenergy-task-4229b9c60fd6.herokuapp.com/api/",
+    "https://dvlpenergy-task-4229b9c60fd6.herokuapp.com/api/solar_plants", 
+    
+]
+
+CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = ["http://" + host for host in ALLOWED_HOSTS]
 
