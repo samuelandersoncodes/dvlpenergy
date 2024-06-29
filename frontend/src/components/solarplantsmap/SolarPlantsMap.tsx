@@ -29,7 +29,7 @@ const SolarPlantMap: React.FC = () => {
     const fetchSolarPlants = async () => {
 
         // Stores Django rest framework api endpoint url
-        const apiUrlEndpoint = 'http://127.0.0.1:8000/api';
+        const apiUrlEndpoint = 'https://dvlpenergy-task-4229b9c60fd6.herokuapp.com/api';
 
         try {
             // Fetch solar plant data from the DJANGO API endpoint
