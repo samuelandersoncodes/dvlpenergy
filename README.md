@@ -83,7 +83,7 @@ I copied the database url and added it to my env.py file.
 
 After that, I set up the database in the settings file. In my bash terminal, I ran 'pip3 install dj_database_url==0.5.0 psycopg2' for the database connection dependencies and updated the requirements.txt file with which I created earlier on 'pip freeze > requirements.txt' and then imported the 'dj_database_url'. To confirm the connection, I 'ran python3 manage.py showmigrations' and then migrated the changes. I then created a 'management/command/load_data function to load the geoJSON fixture and confirmed the data in the browser/Table queries section of the ElephantSQL database.
 
-### 2. Frontend React Setup
+### 3. Frontend React Setup
 
 In the repository's root directory, I created the react app with Vite; 'npm create-vite@latest frontend --template' and chose TypeScript. I swichted to the frontend directory with 'cd frontend', ran installation; 'npm install", and run the server with 'npm run dev'. I then did all the vital additional installations including mapbox-gl which I will most definitely need. After confriming that my server runs smoothly, I created a .env file to keep frontend secret keys, ignored it in the gitignore file and got it committed.
 
