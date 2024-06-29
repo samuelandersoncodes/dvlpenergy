@@ -15,6 +15,7 @@ The live link can be found here: [Live Site - dvlpenergy-task](https://dvlpenerg
     - [Site-Goal](#site-goal)
     - [Agile Planning-and-Process](#planning-and-process)
       - [Steps](#steps)
+          - [Backend Django Setup](#Backend-Django-Setup)
       - [User Stories](#user-stories)
   - [The-Structure-Plane](#the-structure-plane)
     - [Features](#features)
@@ -58,4 +59,19 @@ Subsequently, I used the Kanban board to plan the main segments of the developme
 With that, I had only four main issues set in order of priority due to time constraints. ![Issues](./docs/dvlp-kanban-issues.png)
 It comes along with its respective user stories, acceptance criteria and tasks. For example, the main priority was to get the map well integrated so that I can continue to build upon it. ![Issues](./docs/main-user-story.png)
 
-##Steps
+## Steps
+
+### 1. Backend Django Setup 
+I first created my Django project in the [dvlpenergy-task repository](https://github.com/samuelandersoncodes/dvlpenergy-task) with the command 'django-admin startproject solar_farm_map .' after I have cloned the aforementioned repository with 'git clone https://github.com/samuelandersoncodes/dvlpenergy-task.git'
+
+I then changed the directory to the Django project level with the 'cd solar_farm_map' command.
+
+Thereafter, I created my 'brandenburg_plants' app with the 'python manage.py startapp brandenburg_plants' command.
+
+I straight away created my virtual environment with 'python3 -m venv .venv' and activated it with '. .venv\Scripts\activate', always making sure that it is activated before I hit a key.
+
+Furthermore, I installed the core necessary libraries. For instance, the Django RESTframework with the 'pip install django djangorestframework' and subsequently did so for the other libraries as needed.
+
+I finally configured settings in the 'settings.py' file of the project and also added the new app to the installed apps section and created my superuser with the 'python manage.py createsuperuser' command', migrated changes with 'python manage.py migrate' and made sure the site fires without errors.
+
+
