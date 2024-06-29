@@ -1,6 +1,6 @@
-import logo from "/dvlp-logo-transparent.png";
 import styles from "./Header.module.css"
 import { useState } from "react";
+import logo from "../../../../static/dvlp-logo-transparent.png"
 
 const Header: React.FC = () => {
     // State for menu toggle
