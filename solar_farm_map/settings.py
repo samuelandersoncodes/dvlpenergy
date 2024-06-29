@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+
 if os.path.isfile("env.py"):
     import env
 
@@ -35,8 +36,9 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost:5173",
     "dvlpenergy-task-4229b9c60fd6.herokuapp.com",
-    "dvlpenergy-task-4229b9c60fd6.herokuapp.com/api/"
-    ]
+    "dvlpenergy-task-4229b9c60fd6.herokuapp.com/api/",
+    "dvlpenergy-task-4229b9c60fd6.herokuapp.com/api/solar_plants",
+]
 
 # Application definition
 
@@ -53,7 +55,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -105,18 +107,15 @@ WSGI_APPLICATION = "solar_farm_map.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-    }
+if "DATABASE_URL" in os.environ:
+    DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
 else:
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
             "NAME": BASE_DIR / "db.sqlite3",
+        }
     }
-}
-
 
 
 # Password validation
@@ -156,7 +155,7 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
