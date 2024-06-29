@@ -1,6 +1,6 @@
 import styles from "./Header.module.css"
 import { useState } from "react";
-import logo from "../../../../static/dvlp-logo-transparent.png"
+
 
 const Header: React.FC = () => {
     // State for menu toggle
@@ -16,7 +16,8 @@ const Header: React.FC = () => {
                 {/* logo */}
                 <div>
                     <a href="/" aria-label="Go to home page">
-                        <img src={logo} className={styles.logo} alt="company logo" />
+                        <img src="https://kidomart.s3.eu-central-1.amazonaws.com/media/userprofile/dvlp-logo.webp"
+                            className={styles.logo} alt="company logo" />
                     </a>
                 </div>
                 {/* Links for desktop view */}
