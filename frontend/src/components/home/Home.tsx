@@ -1,6 +1,5 @@
 import styles from "./Home.module.css";
 import { useNavigate } from "react-router-dom";
-import video from "../../../../static/home-video.mp4";
 
 const Home = () => {
     // Initialize navigate function
@@ -16,7 +15,8 @@ const Home = () => {
             <div className={styles.videoContainer}>
                 {/* video background */}
                 <video autoPlay loop muted className={styles.videoBackground}>
-                    <source src={video} type="video/mp4" />
+                    <source src="https://kidomart.s3.eu-central-1.amazonaws.com/media/userprofile/home-video.mp4"
+                        type="video/mp4" />
                 </video>
             </div>
             {/* Button to trigger navigation to the map */}
