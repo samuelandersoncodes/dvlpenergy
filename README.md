@@ -274,4 +274,12 @@ Web application was also opened on the following devices and no responsive issue
 -Samsung Galaxy Tab S7                                                                     
 -Hp EliteBook 8440p                                                        
 -Hp laptop 14s                                                               
--Dell Latitude 5430                                   
+-Dell Latitude 5430   
+
+## Bugs (fixed)
+
+At the production stage, the database was realized to be empty. After conducting unittests and switching to from the sqlite3 databas eto the postgresSQL. This was resolved by reloading the fixtures with the 'load_geojson' custom command I created and using the Heroku Command Line Interface in my Vscode terminal to load the data onto my ElephantSQL databse. 
+
+Inversely, on some mobile phones, it was realized that the background video displays as a mere image which is not the intended feature. I am still trying to fish this out. For now I found that the video file is too large even after I compressed it. I will be working on compressing it further to see if that fixes the malfunctionality.
+
+Besides, the web Application functions fully as expected.
