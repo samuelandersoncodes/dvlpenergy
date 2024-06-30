@@ -191,3 +191,23 @@ Redirects to the  Brandenburg map.
 Actual: 
 
 The Brandenburg map opens upon clcking the Open Map button.
+
+
+**Polygon Layer Popup**
+
+Description:
+
+Steps:
+
+1. Navigate to [dvlpenergy-task](https://dvlpenergy-task-4229b9c60fd6.herokuapp.com/)
+3. Click the Open Map button
+3. While on the map, zoom into the particular polygon layer you want to check.
+4. Click on the layer
+
+Expected:
+
+A white popup with black text is expected to show up with the total area in square meters. 
+
+Actual: 
+
+The area of the polygon is displayed clearly as expected. 
