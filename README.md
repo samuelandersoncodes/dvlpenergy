@@ -301,3 +301,31 @@ The following git commands were the most used during the development stage to pu
 ```git commit --amend -m "Amended git commit message"``` - This command was used to correct mistakenly/misspelt pushed commit messages.
 
 ```git push -f``` - This command was used to force push an amended commit message.
+
+### Heroku Deployment
+
+The site was deployed to Heroku. The steps to deploy are as follows:
+
+- Build the frontend up by running the 'npm run build' command in its directory
+- In the templates/index.html wrapper file, update the static build
+- Collect static files by running the 'python manage.py collectstatic'  
+- Navigate to heroku
+- Click the 'new' button on the top right corner
+- Select create new app 
+- Enter app name (dvlpenergy-task)
+- Select region and click create app
+- Click the resources tab and search for Heroku Postgres
+- Select hobby dev and continue
+- Go to the settings tab and then click reveal config vars
+- Add the following config vars:
+  - SECRET_KEY(s): (***********)
+  - DATABASE_URL: (postgres url)
+- Click the deploy tab
+- Scroll down to Connect to GitHub and sign in / authorize when prompted
+- In the search box, find the repositoy you want to deploy and click connect
+- Scroll down to Manual deploy and choose the main branch
+- Click deploy
+
+The app should now be deployed.
+
+The live link can be found here: [Live Site](https://dvlpenergy-task-4229b9c60fd6.herokuapp.com/)
