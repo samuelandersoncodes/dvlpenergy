@@ -186,11 +186,11 @@ Steps:
 
 Expected:
 
-Redirects to the  Brandenburg map.
+Redirects to the  Brandenburg map with red polygon layers.
 
 Actual: 
 
-The Brandenburg map opens upon clcking the Open Map button.
+The Brandenburg map opens upon clcking the Open Map button with polygon layers.
 
 
 **Polygon Layer Popup**
