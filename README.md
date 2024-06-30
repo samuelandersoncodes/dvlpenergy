@@ -171,3 +171,23 @@ Heroku was used to host the web application.
 
 Related libraries like the 'turf' used for the total area calculation, 'mapbox-gl' for the map initialization, 'proj4' for the EPSG:3857 and EPSG:4326 coordinate reference systems definition, 'mapbox-gl.css' for the map and map layer popup styling were used alongside to facilitate that developement.
 
+## Testing
+
+## Functional Testing
+
+**Open Map Button**
+
+Description:
+
+Steps:
+
+1. Navigate to [dvlpenergy-task](https://dvlpenergy-task-4229b9c60fd6.herokuapp.com/)
+3. Click the Open Map button
+
+Expected:
+
+Redirects to the  Brandenburg map.
+
+Actual: 
+
+The Brandenburg map opens upon clcking the Open Map button.
