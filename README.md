@@ -133,4 +133,8 @@ The database was designed to allow CRUD functionality on the Django [REST Framew
 
 It has only one simple model without any Foreign key so I therefore feel no need to make an Entity Relationship Diagram for it.
 
+### Security
 
+Environment variables were stored in an env.py and .env files respectively for local development for security purposes to ensure no secret keys, access token or sensitive information were commited to the repository. In production, these variables were added to the heroku config vars.
+
+Django corsheader and CRSF settings were configured to secure the site in production.
