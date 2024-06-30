@@ -19,6 +19,7 @@ The live link can be found here: [Live Site - dvlpenergy-task](https://dvlpenerg
           - [ElephantSQL Database Setup](#ElephantSQL-Database-Setup)
           - [Frontend React Setup](#Frontend-React-Setup)
           - [Model Creation](#Model-Creation)
+          - [URL configuratgion][#URL-configuratgion]
       - [User Stories](#user-stories)
   - [The-Structure-Plane](#the-structure-plane)
     - [Features](#features)
@@ -71,9 +72,9 @@ I then changed the directory to the Django project level with the 'cd solar_farm
 
 Thereafter, I created my 'brandenburg_plants' app with the 'python manage.py startapp brandenburg_plants' command.
 
-I straight away created my virtual environment with 'python3 -m venv .venv' and activated it with '. .venv\Scripts\activate', always making sure that it is activated before I hit a key.
+I straight away created my virtual environment with 'python3 -m venv .venv' and activated it with '. .venv\Scripts\activate', always making sure that it is activated before I hit a key. 
 
-Furthermore, I installed the core necessary libraries. For instance, the Django RESTframework with the 'pip install django djangorestframework' and subsequently did so for the other libraries as needed.
+Furthermore, I installed Django and the core necessary libraries. For instance, the Django RESTframework with the 'pip install django djangorestframework' and subsequently did so for the other libraries as needed.
 
 I configured settings in the 'settings.py' file of the project, created the env.py file to store the django secret key and also added the new app to the installed apps section. Afterwards, I created my superuser with the 'python manage.py createsuperuser' command, migrated changes with 'python manage.py migrate' and made sure the site fires without errors. I finally added the .venv, sqlite3 and subsequently the staticfiles files to the gitignore file.
 
@@ -96,5 +97,7 @@ To enable API interactions with the SolarPlant model, I used the Django REST Fra
 
 I then created a viewset for viewing and editing SolarPlant instances. It provides CRUD actions for solar plant objects. It also uses the Solar plant serializer for data serialization and deserialization.
 
+### 5. URL Configuratgion
 
+I created a urls.py file at the app level, imported path, include, DefaultRouter from the restframework. I then set the router and registered it to the SolarPlantViewSet. I added the path to the urlpatterns and included the app url in the main urls.py file at the project level.
 
