@@ -155,3 +155,19 @@ The Inter font together with (system-ui, Avenir, Helvetica, Arial, sans-serif in
 The logo was created with [Canva](https://www.canva.com/design/DAGIkq4s8nM/4wymCabDc6tKMTlBwaIvPg/edit) while its background was removed with [removebg](https://www.remove.bg/upload).
 
 The background video was taken from [Pexels](https://www.pexels.com/search/videos/solar%20panels/) wich is for free and therefore does not infringe on patency rights.
+
+## Technolgies
+
+React was used with vite and TypeScript for the frontend in order to build a modern web app.
+TypeScript was chosen purposefully to check errors at runtime to alleviate bugs.
+
+Django and its RESTframework was used to create the backend rest API endpoint.
+
+AWS S3 Bucket was used to stoe the logo and the video background files.
+
+ElephantSQL database was also used to store the fixture loaded from the bb_solar_plants.geojson.
+
+Heroku was used to host the web application.
+
+Related libraries like the 'turf' used for the total area calculation, 'mapbox-gl' for the map initialization, 'proj4' for the EPSG:3857 and EPSG:4326 coordinate reference systems definition, 'mapbox-gl.css' for the map and map layer popup styling were used alongside to facilitate that developement.
+
