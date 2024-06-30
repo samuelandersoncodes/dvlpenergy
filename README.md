@@ -150,3 +150,8 @@ The main color schemes for the website are orange rgb(222, 153, 33) mostly found
 
 The Inter font together with (system-ui, Avenir, Helvetica, Arial, sans-serif in order of priority as backup fonts) was used throughout the website for text.
 
+### Imagery
+
+The logo was created with [Canva](https://www.canva.com/design/DAGIkq4s8nM/4wymCabDc6tKMTlBwaIvPg/edit) while its background was removed with [removebg](https://www.remove.bg/upload).
+
+The background video was taken from [Pexels](https://www.pexels.com/search/videos/solar%20panels/) wich is for free and therefore does not infringe on patency rights.
