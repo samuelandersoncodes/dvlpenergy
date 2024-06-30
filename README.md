@@ -20,6 +20,7 @@ The live link can be found here: [Live Site - dvlpenergy-task](https://dvlpenerg
           - [Frontend React Setup](#Frontend-React-Setup)
           - [Model Creation](#Model-Creation)
           - [URL configuratgion][#URL-configuratgion]
+          - [Map Integration and Data Fetching](#Map-Integration-and-Data-Fetching)
       - [User Stories](#user-stories)
   - [The-Structure-Plane](#the-structure-plane)
     - [Features](#features)
@@ -100,4 +101,27 @@ I then created a viewset for viewing and editing SolarPlant instances. It provid
 ### 5. URL Configuratgion
 
 I created a urls.py file at the app level, imported path, include, DefaultRouter from the restframework. I then set the router and registered it to the SolarPlantViewSet. I added the path to the urlpatterns and included the app url in the main urls.py file at the project level.
+
+### 6. Map Integration and Data Fetching
+
+The data fetching was done with the JavaScript 'fetch' method in the frontend, after I mocked the API to confirm that the data loads properly.
+Before I fetched the data, I imported mapbox-gl (mapbox-gl already installed in previous steps) and made sure that it is well integrated into the frontend React component 'solarplantsmap/SolarPlantsMap.tsx' with the given access token (access token stored in the git ignored .env file).
+
+Integration with Mapbox involved initializing a map instance within a React useEffect hook. This initialization process included setting up the map's container, style, center coordinates and zoom level. An event listener was implemented to handle map loading events, ensuring that the map initializes properly before proceeding with data visualization.
+
+I configured the component to asynchronously request data from the Django backend API endpoint. The fetching process was thoroughly tested, ensuring that data loads reliably and conforms to the expected format. 
+
+Upon successful retrieval, I transformed the fetched data(initially in JSON format) into geoJSON features suitable for mapping with Mapbox.
+
+Each solar plant entry was mapped to a geoJSON feature with the forEach method (I used the forEach method in order for me to manipulate the existing data and not its copy). 
+Alongside the Installation and importation of the proj4 library, I created a function outside of the 'SolarplantsMap' component to normalize the geometries from the EPSG:3857 projection to EPSG:4326 for compatibility with Mapbox's mapping interface and parse it to the geometry of the features. I also set the properties with index as its id for proper data retrieval and manipulation, especially for adding layers and the popup functionality.
+
+Data visualization on the map was then achieved by dynamically adding geoJSON sources with mapbox's 'addSource' method and polygon layers with the 'addLayer' method for each solar plant feature. Each layer was styled with the mapbox-gl css library to visually represent solar plant locations, using the red color and opacity to distinguish different data points (I used the [mapbox documentation](https://docs.mapbox.com/mapbox-gl-js/guides/) as a guide). 
+I implemented Popups displaying total area information on clicking each solar plant polygon layer with the turf library.
+
+I used the 'try-catch' block to make sure data-fetching errors are handled properly and finally cleaned up the map initialization upon component unmount.
+
+
+
+
 
