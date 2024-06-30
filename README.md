@@ -23,9 +23,6 @@ The live link can be found here: [Live Site - dvlpenergy-task](https://dvlpenerg
           - [Map Integration and Data Fetching](#Map-Integration-and-Data-Fetching)
           - [Home Page](#Home-Page)
       - [User Stories](#user-stories)
-  - [The-Structure-Plane](#the-structure-plane)
-    - [Features](#features)
-    - [Features Left To Implement](#features-left-to-implement)
   - [The-Skeleton-Plane](#the-skeleton-plane)
     - [Database-Design](#database-design)
     - [Security](#security)
@@ -129,5 +126,11 @@ In the end, I built a home page for the web app to look aesthetic. The home page
 A simple navbar(with logo, home and project repository link) as well as a footer(with copyright and project repository link) were implemented.
 
 The project was finally tested (test can be found here; [Testing](#testing) ) and deployed to heroku(the deployment details can be found here; [Deployment](#deployment) )
+
+### Database-Design
+
+The database was designed to allow CRUD functionality on the Django [REST Framework interface](https://dvlpenergy-task-4229b9c60fd6.herokuapp.com/api/solar_plants/) of the project and was purposefully created to serve geoJSON data to the frontend.
+
+It has only one simple model without any Foreign key so I therefore feel no need to make an Entity Relationship Diagram for it.
 
 
