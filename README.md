@@ -210,4 +210,22 @@ A white popup with black text is expected to show up with the total area in squa
 
 Actual: 
 
-The area of the polygon is displayed clearly as expected. 
+The area of the polygon is displayed clearly as expected.
+
+**Links and Logo**
+
+Description:
+
+Steps:
+
+1. Navigate to [dvlpenergy-task](https://dvlpenergy-task-4229b9c60fd6.herokuapp.com/)
+3. Click on any link or the logo.
+
+
+Expected:
+
+The Project repo link should open in an external tab while the logo redirects to the home page 
+
+Actual: 
+
+The the links and the logo work exactly as expected.
