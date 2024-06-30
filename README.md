@@ -310,6 +310,8 @@ The following git commands were the most used during the development stage to pu
 
 The site was deployed to Heroku. The steps to deploy are as follows:
 
+- Add a Procfile in the in the project directory
+- Set up the app's wsgi with gunicorn
 - Build the frontend up by running the 'npm run build' command in its directory
 - In the templates/index.html wrapper file, update the static build
 - Collect static files by running the 'python manage.py collectstatic'  
