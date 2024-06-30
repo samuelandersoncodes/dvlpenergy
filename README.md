@@ -235,3 +235,9 @@ The Project repo link should open in an external tab while the logo redirects to
 Actual: 
 
 The the links and the logo work exactly as expected.
+
+## Lighthouse Report
+
+![Lighthouse report](./docs/dvlp-lighthouse.png)
+
+**If I had more time, I would have loved to clean up the code further and run validator tests too**
