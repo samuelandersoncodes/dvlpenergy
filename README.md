@@ -329,3 +329,18 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 The app should now be deployed.
 
 The live link can be found here: [Live Site](https://dvlpenergy-task-4229b9c60fd6.herokuapp.com/)
+
+## Credits 
+
+* Persons
+    * I thank Oliwia Zaremba for giving me such a practical task. I have really learnt a lot through the development of this project, most especially with maps and geoJSON data.
+
+* [Mapbox docs](https://docs.mapbox.com/style-spec/reference/sources/#geojson)
+    * The mapbox documentation was very helpful as a guide to my code execution with map rendering.
+
+* [Vite docs](https://vitejs.dev/guide/)
+    * Additionally, the Vite documentation helped in finding my way around using the 'import.meta' instead of the 'process' I know in CRA and also using the 'VITE' prefix keyword to access the token in my .env file.
+
+* [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli)
+    * When I got stack with the database loading at the production level, the above Heroku resource was my guide to connect to the ElephantSQL database through my VS code terminal.
+
