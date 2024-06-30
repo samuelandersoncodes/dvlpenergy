@@ -283,3 +283,21 @@ At the production stage, the database was realized to be empty. After conducting
 Inversely, on some mobile phones, it was realized that the background video displays as a mere image which is not the intended feature. I am still trying to fish this out. For now I found that the video file is too large even after I compressed it. I will be working on compressing it further to see if that fixes the malfunctionality.
 
 Besides, the web Application functions fully as expected.
+
+# Deployment
+
+### Version Control
+
+The web application was created using the VScode editor and pushed to github to the [dvlpenergy-task](https://github.com/samuelandersoncodes/dvlpenergy-task) remote repository.
+
+The following git commands were the most used during the development stage to push code to the repository:
+
+```git add <filename>``` - This command was used to add the file(s) to the staging area before they are committed.
+
+```git commit -m “commit message”``` - This command was used to commit changes to the local repository queued for the final push.
+
+```git push``` - This command was used to push all committed code to the remote repository on github.
+
+```git commit --amend -m "Amended git commit message"``` - This command was used to correct mistakenly/misspelt pushed commit messages.
+
+```git push -f``` - This command was used to force push an amended commit message.
