@@ -19,8 +19,9 @@ The live link can be found here: [Live Site - dvlpenergy-task](https://dvlpenerg
           - [ElephantSQL Database Setup](#ElephantSQL-Database-Setup)
           - [Frontend React Setup](#Frontend-React-Setup)
           - [Model Creation](#Model-Creation)
-          - [URL configuratgion][#URL-configuratgion]
+          - [URL Configuratgion](#URL-Configuratgion)
           - [Map Integration and Data Fetching](#Map-Integration-and-Data-Fetching)
+          - [Home Page](#Home-Page)
       - [User Stories](#user-stories)
   - [The-Structure-Plane](#the-structure-plane)
     - [Features](#features)
@@ -121,7 +122,12 @@ I implemented Popups displaying total area information on clicking each solar pl
 
 I used the 'try-catch' block to make sure data-fetching errors are handled properly and finally cleaned up the map initialization upon component unmount.
 
+### 7. Home Page 
 
+In the end, I built a home page for the web app to look aesthetic. The home page comes with a video background of a solar farm with a 'Open Map' button that leads to the map.
 
+A simple navbar(with logo, home and project repository link) as well as a footer(with copyright and project repository link) were implemented.
+
+The project was finally tested (test can be found here; [Testing](#testing) ) and deployed to heroku(the deployment details can be found here; [Deployment](#deployment) )
 
 
