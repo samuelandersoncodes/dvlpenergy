@@ -18,6 +18,7 @@ The live link can be found here: [Live Site - dvlpenergy-task](https://dvlpenerg
           - [Backend Django Setup](#Backend-Django-Setup)
           - [ElephantSQL Database Setup](#ElephantSQL-Database-Setup)
           - [Frontend React Setup](#Frontend-React-Setup)
+          - [Model Creation](#Model-Creation)
       - [User Stories](#user-stories)
   - [The-Structure-Plane](#the-structure-plane)
     - [Features](#features)
@@ -86,5 +87,15 @@ After that, I set up the database in the settings file. In my bash terminal, I r
 ### 3. Frontend React Setup
 
 In the repository's root directory, I created the react app with Vite; 'npm create-vite@latest frontend --template' and chose TypeScript. I swichted to the frontend directory with 'cd frontend', ran installation; 'npm install", and run the server with 'npm run dev'. I then did all the vital additional installations including mapbox-gl which I will most definitely need. After confriming that my server runs smoothly, I created a .env file to keep frontend secret keys, ignored it in the gitignore file and got it committed.
+
+### 4. Model Creation
+
+In my Models.py file of the brandenburg_plants app, I defined the SolarPlant model with name and geometry fields, made migrations with the 'python manage.py makemigrations' and the 'python manage.py migrate' commands.
+
+To enable API interactions with the SolarPlant model, I used the Django REST Framework serializer to ensure that instances of the SolarPlant can be converted to JSON and parsed back into model instances, facilitating smooth data exchange in the API. I only serialized the id, name and geometry fields for the purpose of the project. The name field seemed redundant since the solar plants in the 'bb_solar_plants.geojson' file had no names but I felt it could be useful for a later data enrichment and API usability.
+
+I then created a viewset for viewing and editing SolarPlant instances. It provides CRUD actions for solar plant objects. It also uses the Solar plant serializer for data serialization and deserialization.
+
+
 
 
