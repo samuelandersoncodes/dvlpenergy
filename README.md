@@ -173,6 +173,12 @@ Related libraries like the 'turf' used for the total area calculation, 'mapbox-g
 
 ## Testing
 
+## Automated Testing
+
+The unittest framework was used to test the backed code. All files were testes except the serializers.py file where, I had problems with the GDAL installation on my sytem. Nothwithstanding data was thoroughly logged in the console to ensure its correctly serialized. ![unittest coverage report](./docs/coverage-test-result.png)
+
+For the frontend, TypeScript was used to ensure that any error is caught at runtime.
+
 ## Functional Testing
 
 **Open Map Button**
