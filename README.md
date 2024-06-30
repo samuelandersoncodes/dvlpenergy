@@ -138,3 +138,11 @@ It has only one simple model without any Foreign key so I therefore feel no need
 Environment variables were stored in an env.py and .env files respectively for local development for security purposes to ensure no secret keys, access token or sensitive information were commited to the repository. In production, these variables were added to the heroku config vars.
 
 Django corsheader and CRSF settings were configured to secure the site in production.
+
+## The-Surface-Plane
+### Design
+
+### Colour-Scheme
+
+The main color schemes for the website are orange rgb(222, 153, 33) mostly found on the links, logo and the 'Open Map' button. While gray #242424 is used as background colour. The copyright text comes as an exeption with a white colour.
+
