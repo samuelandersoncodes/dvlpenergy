@@ -146,3 +146,7 @@ Django corsheader and CRSF settings were configured to secure the site in produc
 
 The main color schemes for the website are orange rgb(222, 153, 33) mostly found on the links, logo and the 'Open Map' button. While gray #242424 is used as background colour. The copyright text comes as an exeption with a white colour.
 
+### Typography
+
+The Inter font together with (system-ui, Avenir, Helvetica, Arial, sans-serif in order of priority as backup fonts) was used throughout the website for text.
+
