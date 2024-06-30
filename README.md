@@ -167,9 +167,13 @@ AWS S3 Bucket was used to stoe the logo and the video background files.
 
 ElephantSQL database was also used to store the fixture loaded from the bb_solar_plants.geojson.
 
+Django's whitenoise was used to serve static files in Production.
+
 Heroku was used to host the web application.
 
 Related libraries like the 'turf' used for the total area calculation, 'mapbox-gl' for the map initialization, 'proj4' for the EPSG:3857 and EPSG:4326 coordinate reference systems definition, 'mapbox-gl.css' for the map and map layer popup styling were used alongside to facilitate that developement.
+
+Metatags were also used to boost the app's Search Engine Optimization.
 
 ## Testing
 
