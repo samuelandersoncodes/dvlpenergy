@@ -241,3 +241,37 @@ The the links and the logo work exactly as expected.
 ![Lighthouse report](./docs/dvlp-lighthouse.png)
 
 **If I had more time, I would have loved to clean up the code further and run validator tests too**
+
+## Responsiveness
+
+All pages were tested to ensure responsiveness on screen sizes from 320px and above as defined in WCAG 2.1 Reflow criteria for responsive design on Chrome, Edge, Firefox and Opera browsers.
+
+Steps to test:
+
+- Open a browser and navigate to [dvlpenergy-task](https://dvlpenergy-task-4229b9c60fd6.herokuapp.com/)
+- Open the developer tools (right click and inspect or hit the F12 key)
+- Set to responsive and decrease width to 320px
+- Set the zoom to 50%
+- Click and drag the responsive window to maximum width
+
+Expected:
+
+Web application is responsive on all screen sizes and no images are pixelated or stretched. No horizontal scroll is present. No elements overlap as well.
+
+Actual:
+
+Web application behaved as expected.
+
+Web application was also opened on the following devices and no responsive issues were found(except on some smaller phone like the phone 11, where the background video appears an image):
+                                                           
+-Huawei mipad 10                                                       
+-Iphone 10                                                        
+-Iphone 12 Xs max                                                         
+-Iphone 12                                                              
+-Iphone 14                                                                                            
+-Samsung A 12                                                                 
+-Samsung Galaxy 20                                                                   
+-Samsung Galaxy Tab S7                                                                     
+-Hp EliteBook 8440p                                                        
+-Hp laptop 14s                                                               
+-Dell Latitude 5430                                   
