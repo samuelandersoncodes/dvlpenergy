@@ -98,4 +98,3 @@ I then created a viewset for viewing and editing SolarPlant instances. It provid
 
 
 
-
