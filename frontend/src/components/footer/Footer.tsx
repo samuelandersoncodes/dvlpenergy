@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             <div className={styles.footerWrapper}>
                 {/* Copyright an my github links */}
                 <p>
-                    © dvlp.energy {copyRightYear}
+                    © {copyRightYear} dvlp.energy 
                     <a
                         href="https://github.com/samuelandersoncodes/dvlpenergy-task"
                         target="_blank"
