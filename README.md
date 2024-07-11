@@ -1,4 +1,4 @@
-# dvlpenergy-task
+# dvlpenergy
 
 The dvlpenergy-task web application is a Fullstack application developed with React and the Django REST Framework. The ElephantSQL database is used to store the geoJSON data that feeds the geometry polygon onto the map.
 The application therefore renders a basemap of Brandenburg and indicates with polygon layers where solar plants are situated. The total land area of the solar plants are displayed in square meters upon a click.  
