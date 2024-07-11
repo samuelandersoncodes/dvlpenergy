@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+ import React, { useEffect, useRef } from 'react';
 import mapboxgl, { Map, LngLatLike } from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import * as turf from '@turf/turf';
@@ -24,7 +24,7 @@ const SolarPlantMap: React.FC = () => {
     const map = useRef<Map | null>(null);
 
     // Stores LngLatLike coordinates value
-    const centerCoordinates: LngLatLike = [12.5431, 52.4125];
+    const centerCoordinates: LngLatLike = [13.5431, 52.4125];
 
     const fetchSolarPlants = async () => {
 
@@ -105,7 +105,7 @@ const SolarPlantMap: React.FC = () => {
                     map.current!.fire('style.load');
                 }
             });
-        }
+        } 
         // Cleanup, removes the map when the component unmounts
         return () => {
             if (map.current) {
